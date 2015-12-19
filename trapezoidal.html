@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>梯形的效果---主要是因为position:relative,子元素position:absolute</title>
+    <style>
+        .table-row {
+            zoom: 1;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: rgba(20, 195, 253, 0.08);
+            height:150px;
+            width:100%;
+        }
+        .table-row .tag {
+            background-color: #14c3fd;
+            position: absolute;
+            left: -25px;
+            top: 5px;
+            width: 80px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            color: #FFF;
+        }
+
+    </style>
+</head>
+<body>
+<div class="panel" data-role="panel" data-reactid=".1.0.$=1$/.0.1.$0">
+
+    <div class="panel-body" data-reactid=".1.0.$=1$/.0.1.$0.1"><p data-reactid=".1.0.$=1$/.0.1.$0.1.0">简体开心</p>
+
+        <div class="table-row" data-reactid=".1.0.$=1$/.0.1.$0.1.1">
+            <div class="tag" data-reactid=".1.0.$=1$/.0.1.$0.1.1.0"><span
+                    data-reactid=".1.0.$=1$/.0.1.$0.1.1.0.0">8</span><span
+                    data-reactid=".1.0.$=1$/.0.1.$0.1.1.0.1">月</span></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

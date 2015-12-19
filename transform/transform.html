@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform---变形和改变的意思</title>
+</head>
+<body>
+
+<ul>
+    <li>transform有旋转rotate、扭曲skew、缩放scale和移动translate以及矩阵变形matrix</li>
+    <li>transform可用于内联元素和块级元素</li>
+    <li>transform:rotate() scale() translate3d()使用了transform的多种属性，中间以空格分开</li>
+</ul>
+
+<dl>
+    <dt>1.旋转rotate</dt>
+    <dd>(1)使用：transform:rotate(<angle>)</dd>
+    <dd>(2)例子：transform:rotate(30deg)
+        <p>
+            (1)参数angle是必填的
+            (2)参数为正数是顺时针旋转，负数为逆时针旋转
+            (3)要定义transform-origin,标识的是旋转的基点
+        </p>
+    </dd>
+</dl>
+
+<dl>
+    <dt>2.移动translate</dt>
+    <dd>
+        移动的是移动元素，transform-origin基点默认是元素的中心
+        (1)使用：transform:translate(x,y)表示水平方向和垂直方向同时移动---正负值都可以使用，负值为向上、向左运动,y值不传的话默认为0
+        (2)transform:translateX(x)表示仅水平方向移动
+        (3)transform：translateY(y)表示仅垂直方向移动
+    </dd>
+    <dd>(4)例子：transform:translate(50%,50%)_   transform:translate(20px,20px)
+        transform:translateX(50%)  transform:translateY(50%)
+
+    </dd>
+</dl>
+
+
+<dl>
+    <dt>3.缩放scale</dt>
+    <dd>
+        缩放是缩放元素，transform-origin基点默认是元素的中心，缩放基数为1，大于1就是放大，小于1就是元素缩小
+        (1)transform:scale(x,y)表示水平和垂直方向同时缩放----y值不传的话，默认取x的值
+        (2)transform:scaleX(x)表示仅水平方向缩放
+        (3)transform:scaleY(y)表示仅垂直方向缩放
+    </dd>
+</dl>
+
+
+<dl>
+    <dt>4.扭曲skew</dt>
+    <dd>
+        扭曲是扭曲元素，transform-origin基点默认是元素的中心，
+        x轴负数为逆时针（右上角度减去对应的度数），正数为顺时针（右下角的角度减去对应的度数）
+        y轴负数为顺时针（右上角度减去对应的度数），正数为逆时针（左上角度减去对应的度数）
+        (1)transform:skew(x,y)表示X轴和Y轴同时按一定的角度值进行扭曲变形，y值不传的话默认为0
+        (2)transform:skewX(x)表示X轴按一定的角度值进行扭曲
+        (3)transform:skewY(y)表示仅垂直方向按一定的角度值进行扭曲
+    </dd>
+    <dd>(4)例子：transform:skew(30deg,10deg)
+    </dd>
+</dl>
+
+<dl>
+    <dt>5.矩阵matrix</dt>
+    <dd>
+        transform-origin基点默认是元素的中心
+        (1)matrix(<number>,<number>,<number>,<number>,<number>,<number>),就是基于水平和垂直方向重新定位元素
+        (2)参数是必填的
+    </dd>
+</dl>
+
+
+<h1>二。元素基点transform-origin</h1>
+<p>transform-origin不是transform的属性值，使用方法有点像background-position</p>
+<p>
+    他的主要作用就是让我们在进行transform动作之前可以改变元素的基点位置，
+    因为我们元素默认基点就是其中心位置，
+    换句话说我们没有使用transform-origin改变元素基点位置的情况下，
+    transform进行的rotate,translate,scale,skew,matrix等操作都是以元素自己中心位置进行变化的。
+    但有时候我们需要在不同的位置对元素进行这些操作，
+    那么我们就可以使用transform-origin来对元素进行基点位置改变，
+    使元素基点不在是中心位置，以达到你需要的基点位置
+</p>
+<p>
+    transform-origin(X,Y):用来设置元素的运动的基点（参照点）。默认点是元素的中心点。
+    其中X,Y的值可以是百分比，em，px。
+    其中X也可以是字符参数left,center,right;
+    其中Y也可以是字符参数top,center,bottom;
+</p>
+<p>
+    实例：
+    (1)
+    transform-origin:left top
+    transform-origin:25% 75%
+    25%是距离左边框25%
+    75%是距离上边框75%
+</p>
+</body>
+</html>
+
+
+

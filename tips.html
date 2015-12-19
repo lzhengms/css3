@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tips的动画效果</title>
+    <style>
+        .notice-tip{
+            height: 40px;
+            background-color: #ffb330;
+            line-height: 40px;
+            color: #ffffff;
+            position: fixed;
+            width: 100%;
+            webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            z-index: 999;
+            top:0;
+            text-align: center;
+        }
+
+        @-webkit-keyframes slideInDown {
+            from,
+            to {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+            10%,
+            90% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes slideInDown {
+            from,
+            to {
+                -webkit-transform: translate3d(0, -100%, 0);
+                transform: translate3d(0, -100%, 0);
+            }
+            10%,
+            90% {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .slideInDown {
+            -webkit-animation-name: slideInDown;
+            animation-name: slideInDown;
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+    </style>
+</head>
+<body>
+<div class="slideInDown notice-tip"></div>
+</body>
+</html>
+
+

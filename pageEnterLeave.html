@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面进来和离开的动画效果</title>
+    <style>
+        .page-enter {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+        }
+
+        .page-enter.page-enter-active {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            transition: transform .2s linear;
+        }
+
+        .page-leave {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        .page-leave.page-leave-active {
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+            transition: transform .2s linear;
+        }
+
+
+
+        .example-enter{
+            opacity:0.01;
+            transition:opacity .5s ease-in;
+        }
+        .example-enter-active{
+            opacity:1;
+        }
+
+        .example-leave{
+            opacity:1;
+            transition:opacity .5s ease-in;
+        }
+        .example-leave-active{
+            opacity:0.01;
+        }
+
+    </style>
+</head>
+<body>
+<div className="page-enter page-enter-active">dasdfasf</div>
+
+</body>
+</html>
+

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform的例子</title>
+    <style>
+        .menu ul {
+            border-top: 15px solid black;
+            padding: 0 10px;
+        }
+        .menu ul li{
+            float:left;
+        }
+        .menu ul li a{
+            color: #fff;
+            float: left;
+            margin: 0 5px;
+            font-size: 14px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            width: 65px;
+            padding: 10px 5px;
+            background: #151515;
+            -moz-border-radius: 0 0 5px 5px;
+            -webkit-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+            -moz-box-shadow: 0 0 1px #ccc,inset 0 0 2px #fff;
+            -webkit-box-shadow: 0 0 1px #ccc,inset 0 0 2px #fff;
+            box-shadow: 0 0 1px #ccc,inset 0 0 2px #fff;
+            text-shadow: 0 1px 1px #686868;
+            text-decoration: none;
+        }
+        .menu ul li.translate a{
+            background: #2EC7D2;
+        }
+        .menu ul li.translate-x a {
+            background: #8FDD21;
+        }
+        .menu ul li.translate-y a {
+            background: #F45917;
+        }
+        .menu ul li.rotate a {
+            background: #D50E19;
+        }
+        .menu ul li.scale a {
+            background: #cdddf2;
+        }
+        .menu ul li.scale-x a {
+            background: #0fDD21;
+        }
+        .menu ul li.scale-y a {
+            background: #cd5917;
+        }
+        .menu ul li.skew a {
+            background: #519;
+        }
+        .menu ul li.skew-x a {
+            background: #D50;
+        }
+        .menu ul li.skew-y a {
+            background: #E19;
+        }
+        .menu ul li.matrix a {
+            background: #919;
+        }
+        .menu ul li.translate a:hover{
+            -webkit-transform:translate(-10px,-10px)
+        }
+        .menu ul li.translate-x a:hover{
+            -webkit-transform:translateX(-10px)
+        }
+        .menu ul li.translate-y a:hover{
+            -webkit-transform:translateY(-10px)
+        }
+        .menu ul li.rotate a:hover{
+            -webkit-transform:rotate(45deg)
+        }
+        .menu ul li.scale a:hover{
+            -webkit-transform:scale(2,1)
+        }
+        .menu ul li.scale-x a:hover{
+            -webkit-transform:scaleX(2)
+        }
+        .menu ul li.scale-y a:hover{
+            -webkit-transform:scaleY(2)
+        }
+        .menu ul li.skew a:hover{
+            -webkit-transform:skew(5deg,5deg)
+        }
+        .menu ul li.skew-x a:hover{
+            -webkit-transform:skewX(-30deg)
+        }
+        .menu ul li.skew-y a:hover{
+            -webkit-transform:skewY(-5deg)
+        }
+    </style>
+</head>
+<body>
+<div class="menu">
+    <ul class="clearfix">
+        <li class="item translate"><a href="#">Translate</a></li>
+        <li class="item translate-x"><a href="#">TranslateX</a></li>
+        <li class="item translate-y"><a href="#">TranslateY</a></li>
+        <li class="item rotate"><a href="#">Rotate</a></li>
+        <li class="item scale"><a href="#">Scale</a></li>
+        <li class="item scale-x"><a href="#">ScaleX</a></li>
+        <li class="item scale-y"><a href="#">ScaleY</a></li>
+        <li class="item skew"><a href="#">Skew</a></li>
+        <li class="item skew-x"><a href="#">SkewX</a></li>
+        <li class="item skew-y"><a href="#">SkewY</a></li>
+        <li class="item matrix"><a href="#">Matrix</a></li>
+    </ul>
+</div>
+</body>
+</html>
